@@ -120,7 +120,8 @@ This will start the Open WebUI server, which you can access at [http://localhost
 > Please note that for certain Docker environments, additional configurations might be needed. If you encounter any connection issues, our detailed guide on [Open WebUI Documentation](https://docs.openwebui.com/) is ready to assist you.
 
 > [!WARNING]
-> When using Docker to install Open WebUI, make sure to include the `-v open-webui:/app/backend/data` in your Docker command. This step is crucial as it ensures your database is properly mounted and prevents any loss of data.
+> When using Docker to install Open WebUI, make sure to mount the data directory. Using a named volume works well (`-v open-webui:/app/backend/data`). If you need the same chat history across multiple containers, mount your repository's `backend/data` folder instead:
+> `-v $(pwd)/backend/data:/app/backend/data`.
 
 > [!TIP]  
 > If you wish to utilize Open WebUI with Ollama included or CUDA acceleration, we recommend utilizing our official images tagged with either `:cuda` or `:ollama`. To enable CUDA, you must install the [Nvidia CUDA container toolkit](https://docs.nvidia.com/dgx/nvidia-container-runtime-upgrade/) on your Linux/WSL system.
