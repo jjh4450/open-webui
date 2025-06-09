@@ -208,6 +208,10 @@ In the last part of the command, replace `open-webui` with your container name i
 
 Check our Updating Guide available in our [Open WebUI Documentation](https://docs.openwebui.com/getting-started/updating).
 
+### Building and Publishing Your Own Docker Image
+
+If you want to create a custom Docker image, the repository includes a `Manual Docker Build` workflow. To push images to GitHub Container Registry (GHCR), add a secret named `GHCR_PAT` with a Personal Access Token that has the `packages:write` scope. Then trigger the workflow from the **Actions** tab.
+
 ### Using the Dev Branch 🌙
 
 > [!WARNING]
