@@ -17,4 +17,4 @@ uploads
 .ipynb_checkpoints
 **/*.db
 _test
-backend/data/*
+# backend/data/*
